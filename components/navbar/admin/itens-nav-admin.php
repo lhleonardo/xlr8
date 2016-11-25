@@ -1,10 +1,11 @@
 <?php
-  if (isAdmin(1)) :
+  if (isset($_SESSION['usuario']))
+    if (isAdmin($_SESSION['usuario'])) :
  ?>
    <li class="dropdown">
      <a href="#" class="dropdown-toggle" data-toggle="dropdown"
         role="button" aria-haspopup="true"
-        aria-expanded="false">Gerenciamento <span class="caret"></span>
+        aria-expanded="false">Admnistração <span class="caret"></span>
       </a>
      <ul class="dropdown-menu">
         <li><a href="/view-produtos.php">Produtos</a></li>

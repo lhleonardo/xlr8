@@ -1,5 +1,10 @@
 <?php
-  include('/components/database/connection.php');
+  include('utils/session/session.php');
+  include('components/database/connection.php');
+
+  if (!is_session_started()) {
+    session_start();
+  }
 
   function isAdmin($idUsuario) {
     global $conn;

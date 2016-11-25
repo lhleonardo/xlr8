@@ -1,7 +1,7 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Página inicial</title>
     <?php include("components/head-imports.php") ?>
   </head>
   <body>
@@ -17,8 +17,6 @@
         </div>
       </div>
     </div>
-
     <?php include("components/body-imports.php") ?>
-
   </body>
 </html>

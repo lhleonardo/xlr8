@@ -4,9 +4,14 @@
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
+
+  $resposta = [];
+
   if (login($email, $senha)) {
-    header("location: index.php");
+    $resposta = array("success" => true);
   } else {
-    header("location: incorrect-user.php");
+    $resposta = array("success" => false);
   }
+
+  echo json_encode($resposta);
  ?>
